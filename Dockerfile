@@ -10,9 +10,7 @@ RUN useradd raman
 
 RUN a2enmod dir
 
-CMD mkdir /home/raman/public_html/
-
-COPY index.html /home/raman/public_html/
+COPY index.html /var/www/html
 
 RUN /etc/init.d/apache2 start
 
